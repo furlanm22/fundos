@@ -1,0 +1,23 @@
+version: '3'
+services:
+  oracledb:
+    image: absolutapps/oracle-12c-ee-base
+    networks:
+      - fundos-network
+
+  fundos:
+    build:
+      dockerfile: ./fundos.dockerfile
+      context: .
+    image: furlanm/fundos
+    container_name: fundos-java-8
+    ports:
+      - "8080"
+    networks:
+      - fundos-network
+    depends_on:
+      - "oracledb"
+
+networks:
+  fundos-network:
+    driver: bridge

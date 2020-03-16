@@ -1,0 +1,18 @@
+DOCKER 12c
+
+docker pull store/oracle/database-enterprise:12.2.0.1
+
+docker run --name oracledb12 -p 1521:1521 -p 5500:5500 -v /home/furlanmint/Furlan/Workspace/fundos/database/oradata:/opt/oracle/oradata -d store/oracle/database-enterprise:12.2.0.1
+docker run -e 'DB_SID=FUNDOS' --name oracledb121 -p 1521:1521 -p 5500:5500 -v /home/furlanmint/Furlan/Workspace/fundos/database/oradata:/opt/oracle/oradata -d store/oracle/database-enterprise:12.2.0.1
+docker exec -it oracledb12 bash -c "source /home/oracle/.bashrc; sqlplus /nolog"
+
+ docker run -d --name oracle \
+  --privileged -v $(pwd)/oradata:/u01/app/oracle \
+  -p 8080:8080 -p 1521:1521 absolutapps/oracle-12c-ee
+
+localhost:1521
+SYS
+Oradoc_db1
+
+SID = ORCLCDB
+PDB = ORCLPDB1

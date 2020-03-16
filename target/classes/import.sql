@@ -1,0 +1,1 @@
+insert into Fundos (id, nome, codigo, composicao, taxaAdm) values(1,'BANCO ORIGINAL','1992','FC', '2%');

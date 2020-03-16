@@ -1,0 +1,7 @@
+com/fundos/src/config/SwaggerConfig.class
+com/fundos/src/rest/FundosController.class
+com/fundos/src/repository/FundosRepository.class
+com/fundos/src/entity/Fundos.class
+com/fundos/src/config/SwaggerConfig$1.class
+com/fundos/src/service/FundosService.class
+com/fundos/src/Application.class
